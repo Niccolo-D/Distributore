@@ -1,0 +1,295 @@
+#include <iostream>
+
+using namespace std;
+
+
+struct slot {
+    string prodotto;
+    float prezzo;
+    int numero;
+    int prodotti;
+    float incasso;
+};
+
+slot slot2 ={
+   
+    "cocacola",
+    1,
+    2,
+    6
+};
+slot slot3 {
+     "tuc",
+    1,
+    3,
+    6
+};
+slot slot4 {
+    "acqua",
+     0.50,
+     4,
+     6
+};
+
+slot slot5
+{
+     "panino al prosciutto",
+    1.5,
+    5,
+    6
+};
+
+slot slot6 {
+   "mars",
+    1,
+    6,
+    6
+};
+slot slot7 {
+    "oreo",
+     1.30,
+     7,
+     6
+};
+slot slot8{
+    "kinder",
+     1.70,
+     8,
+     6
+};
+
+slot slot9 {
+    "fanta",
+    1.20,
+    9,
+    6
+};
+slot slot10 {
+    "succo",
+    0.70,
+    10,
+    6
+};
+
+
+
+int main()
+{  
+    int numero_digitato;
+   int metodo_di_pagamento;
+   cout<<"Inserire metodo di pagamento"<<endl<<"1 = contanti"<<endl<<"2 = carta"<<endl<<"3 = app : ";
+   cin>> metodo_di_pagamento;
+   int loop=1;
+   float credito;
+    cout<<"Inserire credito"<<endl;;
+    cin>> credito;
+   if (credito<0){
+       cout<<credito<<" non e' un credito possibile";
+       return 0;
+   }
+   while(loop==1){
+    cout<<"Digitare "<<slot2.numero<<" per prendere "<<slot2.prodotto<<"="<<slot2.prezzo<<"€"<<" disponibilita' = "<<slot2.prodotti<<endl;
+    cout<<"Digitare "<<slot3.numero<<" per prendere "<<slot3.prodotto<<"="<<slot3.prezzo<<"€"<<" disponibilita' = "<<slot3.prodotti<<endl;
+    cout<<"Digitare "<<slot4.numero<<" per prendere "<<slot4.prodotto<<"="<<slot4.prezzo<<"€"<<" disponibilita' = "<<slot4.prodotti<<endl;
+    cout<<"Digitare "<<slot5.numero<<" per prendere "<<slot5.prodotto<<"="<<slot5.prezzo<<"€"<<" disponibilita' = "<<slot5.prodotti<<endl;
+    cout<<"Digitare "<<slot6.numero<<" per prendere "<<slot6.prodotto<<"="<<slot6.prezzo<<"€"<<" disponibilita' = "<<slot6.prodotti<<endl;
+    cout<<"Digitare "<<slot7.numero<<" per prendere "<<slot7.prodotto<<"="<<slot7.prezzo<<"€"<<" disponibilita' = "<<slot7.prodotti<<endl;
+    cout<<"Digitare "<<slot8.numero<<" per prendere "<<slot8.prodotto<<"="<<slot8.prezzo<<"€"<<" disponibilita' = "<<slot8.prodotti<<endl;
+    cout<<"Digitare "<<slot9.numero<<" per prendere "<<slot9.prodotto<<"="<<slot9.prezzo<<"€"<<" disponibilita' = "<<slot9.prodotti<<endl;
+    cout<<"Digitare "<<slot10.numero<<" per prendere "<<slot10.prodotto<<"="<<slot10.prezzo<<"€"<<" disponibilita' = "<<slot10.prodotti<<endl;
+    cout<<"Scegliere prodotto"<<endl;
+    cin>>numero_digitato;
+   
+    if(numero_digitato ==slot2.numero){
+        if(credito<slot2.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot2.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot2.prodotto<<endl;
+        credito = credito - slot2.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot2.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot2.prodotti<<" "<<slot2.prodotto<<endl;
+        slot2.incasso = slot2.incasso + slot2.prezzo;
+        }
+        }
+       
+    }else{
+        if(numero_digitato ==slot3.numero){
+            if(credito<slot3.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot3.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot3.prodotto<<endl;
+        credito = credito - slot3.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot3.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot3.prodotti<<" "<<slot3.prodotto<<endl;
+        slot3.incasso = slot3.incasso + slot3.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot4.numero){
+            if(credito<slot4.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot4.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot4.prodotto<<endl;
+        credito = credito - slot4.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot4.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot4.prodotti<<" "<<slot4.prodotto<<endl;
+        slot4.incasso = slot4.incasso + slot4.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot5.numero){
+            if(credito<slot5.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot5.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot5.prodotto<<endl;
+        credito = credito - slot5.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot5.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot5.prodotti<<" "<<slot5.prodotto<<endl;
+        slot5.incasso = slot5.incasso + slot5.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot6.numero){
+            if(credito<slot6.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot6.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot6.prodotto<<endl;
+        credito = credito - slot6.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot6.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot6.prodotti<<" "<<slot6.prodotto<<endl;
+        slot6.incasso = slot6.incasso + slot6.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot7.numero){
+            if(credito<slot2.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot7.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot7.prodotto<<endl;
+        credito = credito - slot7.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot7.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot7.prodotti<<" "<<slot7.prodotto<<endl;
+        slot7.incasso = slot7.incasso + slot7.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot8.numero){
+            if(credito<slot8.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot8.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot8.prodotto<<endl;
+        credito = credito - slot8.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot8.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot8.prodotti<<" "<<slot8.prodotto<<endl;
+        slot8.incasso = slot8.incasso + slot8.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot9.numero){
+            if(credito<slot9.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot9.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot9.prodotto<<endl;
+        credito = credito - slot9.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot9.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot9.prodotti<<" "<<slot9.prodotto<<endl;
+        slot9.incasso = slot9.incasso + slot9.prezzo;
+        }
+        }
+    }else{
+        if(numero_digitato ==slot10.numero){
+            if(credito<slot10.prezzo){
+            cout<<"Credito insufficente"<<endl;
+        }
+        else{
+            if(slot10.prodotti<=0){
+                cout<<"Prodotto non disponibile"<<endl;
+            }
+            else{
+        cout<<"Ritirare"<<slot10.prodotto<<endl;
+        credito = credito - slot10.prezzo;
+        cout<<"Il tuo credito residuo e' di: "<<credito<<"€"<<endl;
+        slot10.prodotti--;
+        cout<<"Sono disponibili ancora "<<slot10.prodotti<<" "<<slot10.prodotto<<endl;
+        slot10.incasso = slot10.incasso + slot10.prezzo;
+        }
+        }
+    }else{
+        cout<<"Slot non disponibile"<<endl;
+        return 0;
+    }
+   
+   
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    cout<<"Se desideri continuare con gli acquisti digirare 1"<<endl<<"Se hai terminato gli acquisti digitare un qualunque numero diverso da 1"<<endl;
+    cin>>loop;
+   }
+    if (metodo_di_pagamento==1){
+        cout<<"Ritirare il resto di: "<<credito<<"€"<<endl;
+    }
+    
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot2.prodotto<<" = "<<slot2.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot3.prodotto<<" = "<<slot3.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot4.prodotto<<" = "<<slot4.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot5.prodotto<<" = "<<slot5.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot6.prodotto<<" = "<<slot6.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot7.prodotto<<" = "<<slot7.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot8.prodotto<<" = "<<slot8.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot9.prodotto<<" = "<<slot9.incasso<<"€"<<endl;
+    cout<<"l'incasso totale ricevuto dalla vendita di: "<<slot10.prodotto<<" = "<<slot10.incasso<<"€"<<endl;
+}
